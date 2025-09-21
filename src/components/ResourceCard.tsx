@@ -119,12 +119,12 @@ export function ResourceCard({ resource, onTogglePinned, onStatusChange, onSelec
         </div>
       </div>
 
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--text-secondary)]">
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--text-secondary)] line-clamp-6">
         {resource.description}
       </p>
 
       {resource.notes && (
-        <div className="mt-3 rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-muted)] p-3 text-xs text-[var(--text-secondary)]">
+        <div className="mt-3 rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-muted)] p-3 text-xs text-[var(--text-secondary)] line-clamp-4">
           <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--text-tertiary)]">操作备注</div>
           {resource.notes}
         </div>
