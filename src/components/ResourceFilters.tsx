@@ -40,7 +40,10 @@ export function ResourceFilters({
   };
 
   return (
-    <section className="space-y-5 rounded-3xl border border-[var(--border-subtle)] bg-[var(--surface-card)] p-6 shadow-[var(--shadow-card)]/40 transition-colors duration-300">
+    <section
+      className="space-y-5 rounded-3xl border border-[var(--border-subtle)] p-6 shadow-[var(--shadow-card)]/40 transition-colors duration-300"
+      style={{ backgroundColor: "var(--surface-panel)" }}
+    >
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="flex-1">
           <label className="mb-1 block text-sm font-medium text-[var(--text-secondary)]" htmlFor="search">

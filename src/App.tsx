@@ -337,11 +337,12 @@ function App() {
   const hasFilteredResults = filteredResources.length > 0;
 
   return (
-    <div className="relative min-h-screen bg-[var(--surface-body)] pb-16 transition-colors duration-500">
-      <div className="relative mx-auto w-full max-w-[1680px] px-6 sm:px-12 pt-12">
+    <div className="relative z-0 min-h-screen bg-[var(--surface-body)] pb-16 transition-colors duration-500">
+      <div className="relative z-0 mx-auto w-full max-w-[1680px] px-6 sm:px-12 pt-12">
         <AnimatedBackdrop />
         <motion.header
-          className="relative overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-[var(--surface-card)] p-8 shadow-[var(--shadow-card)] transition-colors duration-300"
+          className="relative z-10 overflow-hidden rounded-3xl border border-[var(--border-subtle)] p-8 shadow-[var(--shadow-card)] transition-colors duration-300"
+          style={{ backgroundColor: "var(--surface-panel)" }}
           initial={{ opacity: 0, y: -18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
@@ -354,10 +355,10 @@ function App() {
           />
           <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.4em] text-brand-500/70">Resource Radar</p>
-              <h1 className="text-3xl font-semibold text-[var(--text-primary)]">情报 & 资源收藏库</h1>
+              <p className="text-sm uppercase tracking-[0.45em] text-brand-500/70">Aurora Vault</p>
+              <h1 className="text-3xl font-semibold text-[var(--text-primary)]">太极之势的情报收藏</h1>
               <p className="max-w-2xl text-sm text-[var(--text-secondary)]">
-                整理线报、方法、教程、文件等高价值资料，提供搜索、筛选、评分与置顶；点击“开启收藏宝箱”，为你的收藏添上一点惊喜仪式感。
+                以黑白平衡之意重新诠释资源管理：结构化卡片、抽屉详情与宝箱式新增共同流转，既稳重又保持灵动仪式感。
               </p>
               <dl className="flex flex-wrap gap-4 text-xs text-[var(--text-tertiary)]">
                 <motion.div
@@ -434,7 +435,7 @@ function App() {
           </div>
         </motion.header>
 
-        <main className="mt-10 space-y-8">
+        <main className="relative z-10 mt-10 space-y-8">
           <ResourceFilters
             filters={filters}
             availableTags={allTags}
